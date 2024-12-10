@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- Root element: LoginEvent -->
+    <xs:element name="LoginEvent">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Header element with its sub-elements -->
+                <xs:element name="Header" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="sourceSystem" type="xs:string"/>
+                            <xs:element name="DestinationSystem" type="xs:string"/>
+                            <xs:element name="MessageType" type="xs:string"/>
+                            <xs:element name="MessageSentDateTime" type="xs:dateTime"/>
+                            <xs:element name="MessageSequenceNumber" type="xs:positiveInteger"/>
+                            <xs:element name="TransactionIdentifier" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- CounterID element -->
+                <xs:element name="CounterID" type="xs:string"/>
+
+                <!-- User element -->
+                <xs:element name="User" type="xs:string"/>
+
+                <!-- AirlineID element -->
+                <xs:element name="AirlineID" type="xs:string"/>
+
+                <!-- LoginTime element -->
+                <xs:element name="LoginTime" type="xs:dateTime"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

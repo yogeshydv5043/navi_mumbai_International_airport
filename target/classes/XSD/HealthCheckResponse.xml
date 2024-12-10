@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<healthresponse:HealthCheckResponse xmlns:healthresponse="http://www.collinsaerospace.com/NMIA/2024/HealthCheckResponse"
+                                    xmlns:hed="http://www.collinsaerospace.com/NMIA/2024/HealthCheckResponse"
+                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                    xsi:schemaLocation="http://www.collinsaerospace.com/NMIA/2024 HealthCheckResponse.xsd">
+    <healthresponse:Header>
+        <hed:sourceSystem>NMIA.IB</hed:sourceSystem>
+        <hed:MessageType>HealthCheckRequest</hed:MessageType>
+        <hed:DestinationSystem>NMIA.BHS</hed:DestinationSystem> <!-- Change the name to respective Interface -->
+        <hed:MessageSentDateTime>2024-07-08T11:22:34Z</hed:MessageSentDateTime>
+        <hed:MessageSequenceNumber>133</hed:MessageSequenceNumber>
+        <hed:EchoToken>24343afa</hed:EchoToken>
+    </healthresponse:Header>
+    <healthresponse:Body>
+        <healthresponse:ServicesStatus>Active</healthresponse:ServicesStatus>
+    </healthresponse:Body>
+</healthresponse:HealthCheckResponse>

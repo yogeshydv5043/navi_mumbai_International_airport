@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HealthCheckRequest
+        xmlns="http://www.collinsaerospace.com/NMIA/2024/HealthCheckRequest"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.collinsaerospace.com/NMIA/2024/HealthCheckRequest HealthCheckRequest.xsd">
+    <Header>
+        <sourceSystem>NMIA.BHS</sourceSystem>
+        <MessageType>HealthCheckRequest</MessageType>
+        <DestinationSystem>NMIA.IB</DestinationSystem>
+        <MessageSentDateTime>2024-07-08T11:22:34Z</MessageSentDateTime>
+        <MessageSequenceNumber>1323</MessageSequenceNumber>
+        <EchoToken>24343afa</EchoToken>
+        <AssetId>12345</AssetId> <!-- Add the AssetId element -->
+        <StandName>Stand1</StandName> <!-- Add the StandName element -->
+    </Header>
+    <Body>
+        <Services>Flight Data Services Status</Services>
+    </Body>
+</HealthCheckRequest>

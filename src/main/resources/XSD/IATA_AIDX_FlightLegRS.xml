@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IATA_AIDX_FlightLegRS  TimeStamp="2024-07-08T19:56:09Z" Target="Test"
+                       Version="21.3" TransactionIdentifier="173821471afdsaf1321"
+                       SequenceNmbr="1323"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="http://www.iata.org/IATA/2007/00 IATA_AIDX_FlightLegRS.xsd"
+                       xmlns="http://www.iata.org/IATA/2007/00">
+    <Success  />
+</IATA_AIDX_FlightLegRS>

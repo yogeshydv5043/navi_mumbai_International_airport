@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoginEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="LoginEvent.xsd">
+    <Header>
+        <sourceSystem>NMIA.CUPPS</sourceSystem>
+        <DestinationSystem>NMIA.IB</DestinationSystem>
+        <MessageType>LoginEvent</MessageType>
+        <MessageSentDateTime>2024-07-08T11:22:34Z</MessageSentDateTime>
+        <MessageSequenceNumber>1323</MessageSequenceNumber>
+        <TransactionIdentifier>1234abcd</TransactionIdentifier>
+    </Header>
+    <CounterID>NIACKB001</CounterID>
+    <User>6E</User>
+    <AirlineID>6E123</AirlineID>
+    <LoginTime>2024-09-18T14:30:00Z</LoginTime>
+</LoginEvent>

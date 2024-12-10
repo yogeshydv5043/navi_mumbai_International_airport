@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.collinsaerospace.com/NMIA/2024/HealthCheckRequest"
+           xmlns="http://www.collinsaerospace.com/NMIA/2024/HealthCheckRequest"
+           elementFormDefault="qualified">
+
+    <!-- Define the Header Complex Type -->
+    <xs:complexType name="HeaderType">
+        <xs:sequence>
+            <xs:element name="sourceSystem" type="xs:string"/> <!-- Source system identifier -->
+            <xs:element name="MessageType" type="xs:string"/> <!-- Type of the message -->
+            <xs:element name="DestinationSystem" type="xs:string"/> <!-- Destination system identifier -->
+            <xs:element name="MessageSentDateTime" type="xs:dateTime"/> <!-- Date and time the message was sent -->
+            <xs:element name="MessageSequenceNumber" type="xs:integer"/> <!-- Sequence number for the message -->
+            <xs:element name="EchoToken" type="xs:string"/> <!-- Echo token for tracking -->
+            <xs:element name="AssetId" type="xs:string"/> <!-- Unique identifier of the asset -->
+            <xs:element name="StandName" type="xs:string"/> <!-- Stand ID -->
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Define the Body Complex Type -->
+    <xs:complexType name="BodyType">
+        <xs:sequence>
+            <xs:element name="Services" type="xs:string"/> <!-- Description of services -->
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Define the HealthCheckRequest element -->
+    <xs:element name="HealthCheckRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Header" type="HeaderType"/> <!-- Header section -->
+                <xs:element name="Body" type="BodyType"/> <!-- Body section -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

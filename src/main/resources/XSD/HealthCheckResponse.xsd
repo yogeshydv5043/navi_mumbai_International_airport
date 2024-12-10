@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:healthresponse="http://www.collinsaerospace.com/NMIA/2024/HealthCheckResponse"
+           targetNamespace="http://www.collinsaerospace.com/NMIA/2024/HealthCheckResponse"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <!-- Use xs:import for schemas with a different namespace -->
+    <xs:import namespace="http://www.iata.org/IATA/2007/00" schemaLocation="IATA_CommonTypes.xsd"/>
+    <xs:import namespace="http://www.iata.org/IATA/2007/00" schemaLocation="IATA_SimpleTypes.xsd"/>
+    <xs:import namespace="http://www.iata.org/IATA/2007/00" schemaLocation="IATA_AIDX_CommonTypes.xsd"/>
+
+    <!-- Root Element: HealthCheckResponse -->
+    <xs:element name="HealthCheckResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Header" type="healthresponse:HeaderType"/>
+                <xs:element name="Body">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ServicesStatus" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Complex Type for Header -->
+    <xs:complexType name="HeaderType">
+        <xs:sequence>
+            <xs:element name="sourceSystem" type="xs:string"/>
+            <xs:element name="MessageType" type="xs:string"/>
+            <xs:element name="DestinationSystem" type="xs:string"/>
+            <xs:element name="MessageSentDateTime" type="xs:dateTime"/>
+            <xs:element name="MessageSequenceNumber" type="xs:integer"/>
+            <xs:element name="EchoToken" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
